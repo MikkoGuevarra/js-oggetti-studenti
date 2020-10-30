@@ -37,12 +37,22 @@ var students = [
 for (var i = 0; i < students.length; i++) {
     currentStudent = students[i];
     for (var key in currentStudent) {
+        //stampo solo nome cognome
+        //verifico se key è diverso da age e stampo
         if (key != 'age') {
             console.log(key + ': ' + currentStudent[key]);
         }
-
     }
 }
 
 
 // tramite 3 prompt, chiedere all'utente il nome, il cognome e l'età di un nuovo studente. Creare con questi dati un nuovo oggetto e inserirlo nell'array del punto precedente.
+console.log('this is the third exercize');
+var nome = prompt('What is your name?');
+
+var cognome = prompt('What is your  Last name?');
+
+var eta = prompt('How old are you?');
+
+students.push({nome, cognome, eta});
+console.log(students);
