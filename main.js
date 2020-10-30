@@ -48,11 +48,21 @@ for (var i = 0; i < students.length; i++) {
 
 // tramite 3 prompt, chiedere all'utente il nome, il cognome e l'età di un nuovo studente. Creare con questi dati un nuovo oggetto e inserirlo nell'array del punto precedente.
 console.log('this is the third exercize');
-var nome = prompt('What is your name?');
+var name = prompt('What is your name?');
 
-var cognome = prompt('What is your  Last name?');
+var lastName = prompt('What is your  Last name?');
 
-var eta = prompt('How old are you?');
+var age = prompt('How old are you?');
 
-students.push({nome, cognome, eta});
+students.push({name, lastName, age});
 console.log(students);
+console.log('----------------------------');
+console.log('final print');
+
+for (var i = 0; i < students.length; i++) {
+    currentStudent = students[i];
+    for (var key in currentStudent) {
+        console.log(key + ': ' + currentStudent[key]);
+
+    }
+}
